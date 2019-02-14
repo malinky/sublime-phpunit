@@ -1,6 +1,6 @@
 # Sublime PHPUnit
 
-Convenient Sublime Text commands for running your PHPUnit tests. Scans up the directory tree to find the closest phpunit.xml file and runs phpunit from there. If it can't find one, it just runs phpunit from `/`.
+Convenient Sublime Text commands for running your PHPUnit and Laravel Dusk tests. Scans up the directory tree to find the closest phpunit.xml file and runs phpunit from there. If it can't find one, it just runs phpunit from `/`.
 
 ## Installation
 
@@ -19,21 +19,29 @@ Here's the full list of commands:
 
 ```
 run_phpunit_test
-run_phpunit_tests_in_dir
 run_single_phpunit_test
-run_last_phpunit_test
 run_all_phpunit_tests
+run_phpunit_tests_in_dir
+run_last_phpunit_test
+run_dusk_test
+run_single_dusk_test
+run_all_dusk_tests
+run_dusk_tests_in_dir
 ````
 
 Here are some example keybindings:
 
 ```json
 [
-    { "keys": ["alt+t"], "command": "run_phpunit_test"},
-    { "keys": ["super+alt+t"], "command": "run_single_phpunit_test"},
-    { "keys": ["super+alt+l+t"], "command": "run_last_phpunit_test"},
-    { "keys": ["super+shift+t"], "command": "run_phpunit_tests_in_dir"},
+    { "keys": ["super+alt+t"], "command": "run_phpunit_test"},
+    { "keys": ["alt+t"], "command": "run_single_phpunit_test"},
     { "keys": ["super+shift+ctrl+t"], "command": "run_all_phpunit_tests"},
+    { "keys": ["super+shift+t"], "command": "run_phpunit_tests_in_dir"},
+    { "keys": ["super+alt+l+t"], "command": "run_last_phpunit_test"},
+    { "keys": ["super+alt+d"], "command": "run_dusk_test"},
+    { "keys": ["alt+d"], "command": "run_single_dusk_test"},
+    { "keys": ["super+shift+ctrl+d"], "command": "run_all_dusk_tests"},
+    { "keys": ["super+shift+d"], "command": "run_dusk_tests_in_dir"},
 ]
 
 ```
